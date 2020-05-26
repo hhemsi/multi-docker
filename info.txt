@@ -1,0 +1,15 @@
+the react app is created under client direcoty using the command
+npx create-react-app client
+
+the other projects (server, worker) are manually created and typed.
+
+creating Dockerfile.dev in each project for dev 
+ this will make it easier to update code and test without having to rebuild containers each time
+ remember we need to map the volume
+
+Also docker-compose.yml is created to bring the dependecies such as postgres and redis
+  for dev purposes
+
+Remember: docker-compose up (to build and run)
+
+
