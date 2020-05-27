@@ -25,3 +25,16 @@ in production we rely on AWS external services (AWS RDS and AWS Elastic Cache)
  instead of postgres and redis
  RDS instance created with user:  postgres, pas: postgrespassword, dbname: fibvalues
  security group is creatd then added to RDS, ElastiCache and ElasticBeanstalk
+
+ElasticBeanstalk instance is created, then added the security group to allow connecting to RDS and redis
+   Then added the environment variables 
+      PGDATABASE : fibvalues
+      PGHOST : "ElasticBeanstalk end point value" (multi-docker-postgres.cgszozeldyt7.us-west-1.rds.amazonaws.com)
+      PGPASSWORD : postgrespassword
+      PGPORT : 5432
+      PGUSER : postgres
+      REDIS_HOST : "RDS end point" (multi-docker-redis.ab61xt.0001.usw1.cache.amazonaws.com)
+      REDIS_PORT : 6379
+
+      Note this env param similar to values defined in docker-compose.yml  with updated values as
+      defined in the prod env.
