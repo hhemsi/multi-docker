@@ -24,4 +24,4 @@ in Dockerrun.aws.json: in nginx container definition we added links to indicate 
 in production we rely on AWS external services (AWS RDS and AWS Elastic Cache) 
  instead of postgres and redis
  RDS instance created with user:  postgres, pas: postgrespassword, dbname: fibvalues
- 
+ security group is creatd then added to RDS, ElastiCache and ElasticBeanstalk
