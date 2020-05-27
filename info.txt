@@ -10,6 +10,18 @@ creating Dockerfile.dev in each project for dev
 Also docker-compose.yml is created to bring the dependecies such as postgres and redis
   for dev purposes
 
+docker-compose: services reference the container hostnames
+nginx default.conf has internal definition of upstream servers that reference values defined in
+   docker-compose
+
 Remember: docker-compose up (to build and run)
+connect on localhost:3050
 
 
+in Dockerrun.aws.json: in nginx container definition we added links to indicate to Amazon ECS 
+  that nginx connects/reroutes to client and server containers.
+
+in production we rely on AWS external services (AWS RDS and AWS Elastic Cache) 
+ instead of postgres and redis
+ RDS instance created with user:  postgres, pas: postgrespassword, dbname: fibvalues
+ 
