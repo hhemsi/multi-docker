@@ -1,3 +1,7 @@
+This app version is using docker containers where it is uploaded to AWS using Elastic ElasticBeanstalk
+The K8s version is in complex-app project
+
+
 the react app is created under client direcoty using the command
 npx create-react-app client
 
