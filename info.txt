@@ -13,6 +13,8 @@ Also docker-compose.yml is created to bring the dependecies such as postgres and
 docker-compose: services reference the container hostnames
 nginx default.conf has internal definition of upstream servers that reference values defined in
    docker-compose
+   remember to add --build to force building it in case there are changes
+   docker-compose --build
 
 Remember: docker-compose up (to build and run)
 connect on localhost:3050
